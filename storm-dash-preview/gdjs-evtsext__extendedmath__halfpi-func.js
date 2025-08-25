@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__ExtendedMath__HalfPi !== "undefined") {
 gdjs.evtsExt__ExtendedMath__HalfPi = {};
 
 
-gdjs.evtsExt__ExtendedMath__HalfPi.userFunc0xa5cb18 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedMath__HalfPi.userFunc0xa6d000 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = Math.PI / 2;
 };
@@ -17,7 +17,7 @@ gdjs.evtsExt__ExtendedMath__HalfPi.eventsList0 = function(runtimeScene, eventsFu
 {
 
 
-gdjs.evtsExt__ExtendedMath__HalfPi.userFunc0xa5cb18(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ExtendedMath__HalfPi.userFunc0xa6d000(runtimeScene, eventsFunctionContext);
 
 }
 

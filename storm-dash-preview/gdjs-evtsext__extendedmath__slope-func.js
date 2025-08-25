@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__ExtendedMath__Slope !== "undefined") {
 gdjs.evtsExt__ExtendedMath__Slope = {};
 
 
-gdjs.evtsExt__ExtendedMath__Slope.userFunc0xa5cb18 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedMath__Slope.userFunc0xa65ab0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const x1 = eventsFunctionContext.getArgument("x1");
 const y1 = eventsFunctionContext.getArgument("y1");
@@ -22,7 +22,7 @@ gdjs.evtsExt__ExtendedMath__Slope.eventsList0 = function(runtimeScene, eventsFun
 {
 
 
-gdjs.evtsExt__ExtendedMath__Slope.userFunc0xa5cb18(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ExtendedMath__Slope.userFunc0xa65ab0(runtimeScene, eventsFunctionContext);
 
 }
 

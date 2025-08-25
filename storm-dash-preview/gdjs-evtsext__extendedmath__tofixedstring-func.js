@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__ExtendedMath__ToFixedString !== "undefined") {
 gdjs.evtsExt__ExtendedMath__ToFixedString = {};
 
 
-gdjs.evtsExt__ExtendedMath__ToFixedString.userFunc0xa5cb18 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedMath__ToFixedString.userFunc0xa65ab0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const valueToBeRounded = eventsFunctionContext.getArgument("ValueToBeRounded");
 const numberOfDecimalPlaces = eventsFunctionContext.getArgument("NumberOfDecimalPlaces");
@@ -29,7 +29,7 @@ let isConditionTrue_0 = false;
 {
 
 
-gdjs.evtsExt__ExtendedMath__ToFixedString.userFunc0xa5cb18(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ExtendedMath__ToFixedString.userFunc0xa65ab0(runtimeScene, eventsFunctionContext);
 
 }
 

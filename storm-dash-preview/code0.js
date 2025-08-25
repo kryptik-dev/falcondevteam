@@ -100,7 +100,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.storage.elementExistsInJSONFile("records", "money");
 if (isConditionTrue_0) {
-{gdjs.evtTools.storage.readNumberFromJSONFile("records", "money", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(7));
+{gdjs.evtTools.storage.readNumberFromJSONFile("records", "money", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(2));
 }}
 
 }
@@ -184,7 +184,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.introCode.asyncCallback20733972 = function (runtimeScene, asyncObjectsList) {
+};gdjs.introCode.asyncCallback20987692 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.introCode.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("logo"), gdjs.introCode.GDlogoObjects2);
 
@@ -206,14 +206,14 @@ gdjs.introCode.eventsList1 = function(runtimeScene) {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.introCode.localVariables);
 for (const obj of gdjs.introCode.GDlogoObjects1) asyncObjectsList.addObject("logo", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3), (runtimeScene) => (gdjs.introCode.asyncCallback20733972(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3), (runtimeScene) => (gdjs.introCode.asyncCallback20987692(runtimeScene, asyncObjectsList)));
 }
 }
 
 }
 
 
-};gdjs.introCode.asyncCallback20736492 = function (runtimeScene, asyncObjectsList) {
+};gdjs.introCode.asyncCallback20990212 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.introCode.localVariables);
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Main Menu", false);
 }gdjs.introCode.localVariables.length = 0;
@@ -227,7 +227,7 @@ gdjs.introCode.eventsList2 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.introCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.introCode.asyncCallback20736492(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.introCode.asyncCallback20990212(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -301,7 +301,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.sound.isSoundOnChannelStopped(runtimeScene, 0);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(20735612);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(20989332);
 }
 }
 if (isConditionTrue_0) {

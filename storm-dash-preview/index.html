@@ -23,7 +23,108 @@
             overflow: hidden;
         }
 
-        
+        /* Landscape orientation styles */
+        .landscape-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            transform: rotate(90deg);
+            transform-origin: center center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .landscape-container canvas {
+            max-width: 100vh;
+            max-height: 100vw;
+            width: auto;
+            height: auto;
+        }
+
+        /* Portrait warning overlay */
+        .portrait-warning {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000;
+            color: #ffffff;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            z-index: 9999;
+            font-family: Arial, sans-serif;
+        }
+
+        .portrait-warning.show {
+            display: flex;
+        }
+
+        .portrait-warning h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .portrait-warning p {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .rotate-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: rotate 2s infinite linear;
+        }
+
+        .force-landscape-btn {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+        }
+
+        .force-landscape-btn:hover {
+            background-color: #1976D2;
+            box-shadow: 0 6px 12px rgba(33, 150, 243, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .force-landscape-btn:active {
+            background-color: #1565C0;
+            transform: translateY(0);
+        }
+
+        .force-landscape-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Hide portrait warning on landscape */
+        @media (orientation: landscape) {
+            .portrait-warning {
+                display: none !important;
+            }
+        }
 	</style>
     <!-- Libs and GDJS core files : -->
 		<script src="libs/jshashtable.js" crossorigin="anonymous"></script>
@@ -88,6 +189,7 @@
 	<script src="howler-sound-manager/howler-sound-manager.js" crossorigin="anonymous"></script>
 	<script src="fontfaceobserver-font-manager/fontfaceobserver.js" crossorigin="anonymous"></script>
 	<script src="fontfaceobserver-font-manager/fontfaceobserver-font-manager.js" crossorigin="anonymous"></script>
+	<script src="gdjs-evtsext__buttonstates__buttoncolortinttween.js" crossorigin="anonymous"></script>
 	<script src="gdjs-evtsext__buttonstates__buttonfsm.js" crossorigin="anonymous"></script>
 	<script src="gdjs-evtsext__camerashake__camerashake-func.js" crossorigin="anonymous"></script>
 	<script src="gdjs-evtsext__camerashake__create-func.js" crossorigin="anonymous"></script>
@@ -227,15 +329,104 @@
 </head>
 <body>
 
+    <!-- Portrait orientation warning -->
+    <div class="portrait-warning" id="portraitWarning">
+        <div class="rotate-icon">🔄</div>
+        <h2>Please Rotate Your Device</h2>
+        <p>Storm Dash works best in landscape mode</p>
+        <p>Please rotate your device to landscape orientation</p>
+        <button id="forceLandscapeBtn" class="force-landscape-btn">Force Landscape Mode</button>
+    </div>
+
+    <!-- Landscape container for the game -->
+    <div class="landscape-container" id="landscapeContainer">
+        <!-- Game canvas will be inserted here -->
+    </div>
     
 	<script>
 
     (function() {
+        // Orientation detection and handling
+        const portraitWarning = document.getElementById('portraitWarning');
+        const landscapeContainer = document.getElementById('landscapeContainer');
+        const forceLandscapeBtn = document.getElementById('forceLandscapeBtn');
+        
+        let isLandscapeMode = false;
+        
+        function checkOrientation() {
+            if (window.innerHeight > window.innerWidth && !isLandscapeMode) {
+                // Portrait mode - show warning
+                portraitWarning.classList.add('show');
+                landscapeContainer.style.display = 'none';
+            } else {
+                // Landscape mode - hide warning and show game
+                portraitWarning.classList.remove('show');
+                landscapeContainer.style.display = 'flex';
+            }
+        }
+
+        // Check if Screen Orientation API is supported
+        function isScreenOrientationSupported() {
+            return screen.orientation && screen.orientation.lock;
+        }
+
+        // Force landscape mode using Screen Orientation API
+        async function forceLandscapeMode() {
+            if (!isScreenOrientationSupported()) {
+                alert('Screen Orientation API not supported in this browser. Please rotate your device manually.');
+                return;
+            }
+
+            try {
+                // First request fullscreen (required for orientation lock)
+                await document.documentElement.requestFullscreen();
+                
+                // Then lock to landscape
+                await screen.orientation.lock('landscape');
+                
+                console.log('Orientation locked to landscape');
+                isLandscapeMode = true;
+                checkOrientation();
+                
+                // Disable the button after successful lock
+                forceLandscapeBtn.disabled = true;
+                forceLandscapeBtn.textContent = 'Landscape Mode Active';
+                
+            } catch (error) {
+                console.error('Failed to force landscape mode:', error);
+                
+                if (error.name === 'NotAllowedError') {
+                    alert('Please allow fullscreen access and try again.');
+                } else if (error.name === 'NotSupportedError') {
+                    alert('Landscape mode not supported on this device. Please rotate manually.');
+                } else {
+                    alert('Failed to force landscape mode. Please rotate your device manually.');
+                }
+            }
+        }
+
+        // Handle force landscape button click
+        forceLandscapeBtn.addEventListener('click', forceLandscapeMode);
+
+        // Check orientation on load
+        checkOrientation();
+
+        // Check orientation on resize/orientation change
+        window.addEventListener('resize', checkOrientation);
+        window.addEventListener('orientationchange', function() {
+            setTimeout(checkOrientation, 100); // Small delay for orientation change
+        });
+
         //Initialization
         var game = new gdjs.RuntimeGame(gdjs.projectData, {});
 
         //Create a renderer
-        game.getRenderer().createStandardCanvas(document.body);
+        var canvas = game.getRenderer().createStandardCanvas(document.body);
+        
+        // Move canvas to landscape container
+        if (canvas && landscapeContainer) {
+            landscapeContainer.appendChild(canvas);
+        }
 
         //Bind keyboards/mouse/touch events
         game.getRenderer().bindStandardEvents(game.getInputManager(), window, document);

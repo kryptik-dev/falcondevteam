@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__ExtendedMath__Lcm !== "undefined") {
 gdjs.evtsExt__ExtendedMath__Lcm = {};
 
 
-gdjs.evtsExt__ExtendedMath__Lcm.userFunc0xa5cb18 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedMath__Lcm.userFunc0xa65ab0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 function gcf(a, b) {
     while (a != b) {
@@ -45,7 +45,7 @@ gdjs.evtsExt__ExtendedMath__Lcm.eventsList0 = function(runtimeScene, eventsFunct
 {
 
 
-gdjs.evtsExt__ExtendedMath__Lcm.userFunc0xa5cb18(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ExtendedMath__Lcm.userFunc0xa65ab0(runtimeScene, eventsFunctionContext);
 
 }
 

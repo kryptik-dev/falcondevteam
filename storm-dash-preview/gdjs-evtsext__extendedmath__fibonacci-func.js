@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__ExtendedMath__Fibonacci !== "undefined") {
 gdjs.evtsExt__ExtendedMath__Fibonacci = {};
 
 
-gdjs.evtsExt__ExtendedMath__Fibonacci.userFunc0xa5cb18 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ExtendedMath__Fibonacci.userFunc0xa65ab0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 function fibonacci(n) {
     let initial = 0;
@@ -34,7 +34,7 @@ gdjs.evtsExt__ExtendedMath__Fibonacci.eventsList0 = function(runtimeScene, event
 {
 
 
-gdjs.evtsExt__ExtendedMath__Fibonacci.userFunc0xa5cb18(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__ExtendedMath__Fibonacci.userFunc0xa65ab0(runtimeScene, eventsFunctionContext);
 
 }
 

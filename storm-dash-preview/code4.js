@@ -308,7 +308,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.storage.elementExistsInJSONFile("records", "money");
 if (isConditionTrue_0) {
-{gdjs.evtTools.storage.readNumberFromJSONFile("records", "money", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(7));
+{gdjs.evtTools.storage.readNumberFromJSONFile("records", "money", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(2));
 }}
 
 }
@@ -392,7 +392,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.shopCode.asyncCallback21609524 = function (runtimeScene, asyncObjectsList) {
+};gdjs.shopCode.asyncCallback21933628 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.shopCode.localVariables);
 {runtimeScene.getScene().getVariables().getFromIndex(0).setNumber(gdjs.randomInRange(1, 5));
 }{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "backgroundtimer");
@@ -408,14 +408,14 @@ gdjs.shopCode.eventsList1 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.shopCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3), (runtimeScene) => (gdjs.shopCode.asyncCallback21609524(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3), (runtimeScene) => (gdjs.shopCode.asyncCallback21933628(runtimeScene, asyncObjectsList)));
 }
 }
 
 }
 
 
-};gdjs.shopCode.asyncCallback21610852 = function (runtimeScene, asyncObjectsList) {
+};gdjs.shopCode.asyncCallback21934956 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.shopCode.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("Clouds"), gdjs.shopCode.GDCloudsObjects4);
 
@@ -448,14 +448,14 @@ const asyncObjectsList = gdjs.LongLivedObjectsList.from(parentAsyncObjectsList);
 asyncObjectsList.backupLocalVariablesContainers(gdjs.shopCode.localVariables);
 /* Don't save Clouds as it will be provided by the parent asyncObjectsList. */
 /* Don't save Clouds2 as it will be provided by the parent asyncObjectsList. */
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3.5), (runtimeScene) => (gdjs.shopCode.asyncCallback21610852(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3.5), (runtimeScene) => (gdjs.shopCode.asyncCallback21934956(runtimeScene, asyncObjectsList)));
 }
 }
 
 }
 
 
-};gdjs.shopCode.asyncCallback21611804 = function (runtimeScene, asyncObjectsList) {
+};gdjs.shopCode.asyncCallback21935908 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.shopCode.localVariables);
 
 { //Subevents
@@ -473,14 +473,14 @@ const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.shopCode.localVariables);
 for (const obj of gdjs.shopCode.GDCloudsObjects2) asyncObjectsList.addObject("Clouds", obj);
 for (const obj of gdjs.shopCode.GDClouds2Objects2) asyncObjectsList.addObject("Clouds2", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(20), (runtimeScene) => (gdjs.shopCode.asyncCallback21611804(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(20), (runtimeScene) => (gdjs.shopCode.asyncCallback21935908(runtimeScene, asyncObjectsList)));
 }
 }
 
 }
 
 
-};gdjs.shopCode.asyncCallback21615316 = function (runtimeScene, asyncObjectsList) {
+};gdjs.shopCode.asyncCallback21939420 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.shopCode.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("Backgroundcloud2"), gdjs.shopCode.GDBackgroundcloud2Objects4);
 
@@ -513,14 +513,14 @@ const asyncObjectsList = gdjs.LongLivedObjectsList.from(parentAsyncObjectsList);
 asyncObjectsList.backupLocalVariablesContainers(gdjs.shopCode.localVariables);
 /* Don't save Backgroundcloud2 as it will be provided by the parent asyncObjectsList. */
 /* Don't save biggerhill2 as it will be provided by the parent asyncObjectsList. */
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3.5), (runtimeScene) => (gdjs.shopCode.asyncCallback21615316(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3.5), (runtimeScene) => (gdjs.shopCode.asyncCallback21939420(runtimeScene, asyncObjectsList)));
 }
 }
 
 }
 
 
-};gdjs.shopCode.asyncCallback21614124 = function (runtimeScene, asyncObjectsList) {
+};gdjs.shopCode.asyncCallback21938228 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.shopCode.localVariables);
 
 { //Subevents
@@ -538,14 +538,14 @@ const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.shopCode.localVariables);
 for (const obj of gdjs.shopCode.GDBackgroundcloud2Objects2) asyncObjectsList.addObject("Backgroundcloud2", obj);
 for (const obj of gdjs.shopCode.GDbiggerhill2Objects2) asyncObjectsList.addObject("biggerhill2", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(20), (runtimeScene) => (gdjs.shopCode.asyncCallback21614124(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(20), (runtimeScene) => (gdjs.shopCode.asyncCallback21938228(runtimeScene, asyncObjectsList)));
 }
 }
 
 }
 
 
-};gdjs.shopCode.asyncCallback21617956 = function (runtimeScene, asyncObjectsList) {
+};gdjs.shopCode.asyncCallback21942060 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.shopCode.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("Cloud"), gdjs.shopCode.GDCloudObjects4);
 
@@ -569,14 +569,14 @@ const parentAsyncObjectsList = asyncObjectsList;
 const asyncObjectsList = gdjs.LongLivedObjectsList.from(parentAsyncObjectsList);
 asyncObjectsList.backupLocalVariablesContainers(gdjs.shopCode.localVariables);
 /* Don't save Cloud as it will be provided by the parent asyncObjectsList. */
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3.5), (runtimeScene) => (gdjs.shopCode.asyncCallback21617956(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3.5), (runtimeScene) => (gdjs.shopCode.asyncCallback21942060(runtimeScene, asyncObjectsList)));
 }
 }
 
 }
 
 
-};gdjs.shopCode.asyncCallback21617860 = function (runtimeScene, asyncObjectsList) {
+};gdjs.shopCode.asyncCallback21941964 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.shopCode.localVariables);
 
 { //Subevents
@@ -593,14 +593,14 @@ gdjs.shopCode.eventsList7 = function(runtimeScene) {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.shopCode.localVariables);
 for (const obj of gdjs.shopCode.GDCloudObjects2) asyncObjectsList.addObject("Cloud", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(20), (runtimeScene) => (gdjs.shopCode.asyncCallback21617860(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(20), (runtimeScene) => (gdjs.shopCode.asyncCallback21941964(runtimeScene, asyncObjectsList)));
 }
 }
 
 }
 
 
-};gdjs.shopCode.asyncCallback21621100 = function (runtimeScene, asyncObjectsList) {
+};gdjs.shopCode.asyncCallback21945204 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.shopCode.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("Cloud2"), gdjs.shopCode.GDCloud2Objects4);
 
@@ -633,14 +633,14 @@ const asyncObjectsList = gdjs.LongLivedObjectsList.from(parentAsyncObjectsList);
 asyncObjectsList.backupLocalVariablesContainers(gdjs.shopCode.localVariables);
 /* Don't save Cloud2 as it will be provided by the parent asyncObjectsList. */
 /* Don't save Reflection as it will be provided by the parent asyncObjectsList. */
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3.5), (runtimeScene) => (gdjs.shopCode.asyncCallback21621100(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3.5), (runtimeScene) => (gdjs.shopCode.asyncCallback21945204(runtimeScene, asyncObjectsList)));
 }
 }
 
 }
 
 
-};gdjs.shopCode.asyncCallback21620876 = function (runtimeScene, asyncObjectsList) {
+};gdjs.shopCode.asyncCallback21944980 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.shopCode.localVariables);
 
 { //Subevents
@@ -658,14 +658,14 @@ const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.shopCode.localVariables);
 for (const obj of gdjs.shopCode.GDCloud2Objects2) asyncObjectsList.addObject("Cloud2", obj);
 for (const obj of gdjs.shopCode.GDReflectionObjects2) asyncObjectsList.addObject("Reflection", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(20), (runtimeScene) => (gdjs.shopCode.asyncCallback21620876(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(20), (runtimeScene) => (gdjs.shopCode.asyncCallback21944980(runtimeScene, asyncObjectsList)));
 }
 }
 
 }
 
 
-};gdjs.shopCode.asyncCallback21624172 = function (runtimeScene, asyncObjectsList) {
+};gdjs.shopCode.asyncCallback21948276 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.shopCode.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("BiggerCloud"), gdjs.shopCode.GDBiggerCloudObjects4);
 
@@ -698,14 +698,14 @@ const asyncObjectsList = gdjs.LongLivedObjectsList.from(parentAsyncObjectsList);
 asyncObjectsList.backupLocalVariablesContainers(gdjs.shopCode.localVariables);
 /* Don't save BiggerCloud as it will be provided by the parent asyncObjectsList. */
 /* Don't save smallercloudbelow as it will be provided by the parent asyncObjectsList. */
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3.5), (runtimeScene) => (gdjs.shopCode.asyncCallback21624172(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3.5), (runtimeScene) => (gdjs.shopCode.asyncCallback21948276(runtimeScene, asyncObjectsList)));
 }
 }
 
 }
 
 
-};gdjs.shopCode.asyncCallback21623876 = function (runtimeScene, asyncObjectsList) {
+};gdjs.shopCode.asyncCallback21947980 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.shopCode.localVariables);
 
 { //Subevents
@@ -723,7 +723,7 @@ const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.shopCode.localVariables);
 for (const obj of gdjs.shopCode.GDBiggerCloudObjects2) asyncObjectsList.addObject("BiggerCloud", obj);
 for (const obj of gdjs.shopCode.GDsmallercloudbelowObjects2) asyncObjectsList.addObject("smallercloudbelow", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(20), (runtimeScene) => (gdjs.shopCode.asyncCallback21623876(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(20), (runtimeScene) => (gdjs.shopCode.asyncCallback21947980(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -749,7 +749,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "backgroundtimer") >= 10;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(21609100);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(21933204);
 }
 }
 if (isConditionTrue_0) {
@@ -961,7 +961,7 @@ gdjs.shopCode.eventsList12(runtimeScene);} //End of subevents
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(8).getChild("toxicDrop").getAsBoolean();
+{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(3).getChild("toxicDrop").getAsBoolean();
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("toxic_wather"), gdjs.shopCode.GDtoxic_9595watherObjects2);
@@ -978,7 +978,7 @@ gdjs.copyArray(runtimeScene.getObjects("toxic_wather"), gdjs.shopCode.GDtoxic_95
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(8).getChild("lavaDrop").getAsBoolean();
+{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(3).getChild("lavaDrop").getAsBoolean();
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("lava_drop"), gdjs.shopCode.GDlava_9595dropObjects2);
@@ -995,7 +995,7 @@ gdjs.copyArray(runtimeScene.getObjects("lava_drop"), gdjs.shopCode.GDlava_9595dr
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(8).getChild("whiteHero").getAsBoolean();
+{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(3).getChild("whiteHero").getAsBoolean();
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("white_bear_buy_button"), gdjs.shopCode.GDwhite_9595bear_9595buy_9595buttonObjects2);
@@ -1012,7 +1012,7 @@ gdjs.copyArray(runtimeScene.getObjects("white_bear_buy_button"), gdjs.shopCode.G
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(8).getChild("pinkHero").getAsBoolean();
+{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(3).getChild("pinkHero").getAsBoolean();
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("pink_bear_buy_button2"), gdjs.shopCode.GDpink_9595bear_9595buy_9595button2Objects2);
@@ -1047,9 +1047,9 @@ gdjs.copyArray(runtimeScene.getObjects("pink_bear_buy_button2"), gdjs.shopCode.G
 }
 
 
-};gdjs.shopCode.asyncCallback21433084 = function (runtimeScene, asyncObjectsList) {
+};gdjs.shopCode.asyncCallback21772396 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.shopCode.localVariables);
-{runtimeScene.getGame().getVariables().getFromIndex(8).getChild("toxicDrop").setBoolean(true);
+{runtimeScene.getGame().getVariables().getFromIndex(3).getChild("toxicDrop").setBoolean(true);
 }gdjs.shopCode.localVariables.length = 0;
 }
 gdjs.shopCode.eventsList16 = function(runtimeScene) {
@@ -1061,7 +1061,7 @@ gdjs.shopCode.eventsList16 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.shopCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2), (runtimeScene) => (gdjs.shopCode.asyncCallback21433084(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2), (runtimeScene) => (gdjs.shopCode.asyncCallback21772396(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -1075,10 +1075,10 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2)
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(8).getChild("toxicDrop").getAsBoolean();
+{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(3).getChild("toxicDrop").getAsBoolean();
 }
 if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(5).setString("toxic");
+{gdjs.VariablesContainer.badVariable.setString("toxic");
 }}
 
 }
@@ -1089,7 +1089,7 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(8).getChild("toxicDrop").getAsBoolean();
+{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(3).getChild("toxicDrop").getAsBoolean();
 }
 if (isConditionTrue_0) {
 /* Reuse gdjs.shopCode.GDtoxic_9595watherObjects2 */
@@ -1104,9 +1104,9 @@ gdjs.shopCode.eventsList16(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.shopCode.asyncCallback21446092 = function (runtimeScene, asyncObjectsList) {
+};gdjs.shopCode.asyncCallback21775948 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.shopCode.localVariables);
-{runtimeScene.getGame().getVariables().getFromIndex(8).getChild("lavaDrop").setBoolean(true);
+{runtimeScene.getGame().getVariables().getFromIndex(3).getChild("lavaDrop").setBoolean(true);
 }gdjs.shopCode.localVariables.length = 0;
 }
 gdjs.shopCode.eventsList18 = function(runtimeScene) {
@@ -1118,7 +1118,7 @@ gdjs.shopCode.eventsList18 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.shopCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2), (runtimeScene) => (gdjs.shopCode.asyncCallback21446092(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2), (runtimeScene) => (gdjs.shopCode.asyncCallback21775948(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -1132,10 +1132,10 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2)
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(8).getChild("lavaDrop").getAsBoolean();
+{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(3).getChild("lavaDrop").getAsBoolean();
 }
 if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(5).setString("lava");
+{gdjs.VariablesContainer.badVariable.setString("lava");
 }}
 
 }
@@ -1146,7 +1146,7 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(8).getChild("lavaDrop").getAsBoolean();
+{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(3).getChild("lavaDrop").getAsBoolean();
 }
 if (isConditionTrue_0) {
 /* Reuse gdjs.shopCode.GDlava_9595dropObjects2 */
@@ -1161,9 +1161,9 @@ gdjs.shopCode.eventsList18(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.shopCode.asyncCallback21436884 = function (runtimeScene, asyncObjectsList) {
+};gdjs.shopCode.asyncCallback21780492 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.shopCode.localVariables);
-{runtimeScene.getGame().getVariables().getFromIndex(8).getChild("whiteHero").setBoolean(true);
+{runtimeScene.getGame().getVariables().getFromIndex(3).getChild("whiteHero").setBoolean(true);
 }gdjs.shopCode.localVariables.length = 0;
 }
 gdjs.shopCode.eventsList20 = function(runtimeScene) {
@@ -1175,7 +1175,7 @@ gdjs.shopCode.eventsList20 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.shopCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2), (runtimeScene) => (gdjs.shopCode.asyncCallback21436884(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2), (runtimeScene) => (gdjs.shopCode.asyncCallback21780492(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -1189,10 +1189,10 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2)
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(8).getChild("whiteHero").getAsBoolean();
+{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(3).getChild("whiteHero").getAsBoolean();
 }
 if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(6).setString("white");
+{gdjs.VariablesContainer.badVariable.setString("white");
 }}
 
 }
@@ -1203,7 +1203,7 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(8).getChild("whiteHero").getAsBoolean();
+{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(3).getChild("whiteHero").getAsBoolean();
 }
 if (isConditionTrue_0) {
 /* Reuse gdjs.shopCode.GDwhite_9595bear_9595buy_9595buttonObjects2 */
@@ -1218,9 +1218,9 @@ gdjs.shopCode.eventsList20(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.shopCode.asyncCallback21415932 = function (runtimeScene, asyncObjectsList) {
+};gdjs.shopCode.asyncCallback21589308 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.shopCode.localVariables);
-{runtimeScene.getGame().getVariables().getFromIndex(8).getChild("pinkHero").setBoolean(true);
+{runtimeScene.getGame().getVariables().getFromIndex(3).getChild("pinkHero").setBoolean(true);
 }gdjs.shopCode.localVariables.length = 0;
 }
 gdjs.shopCode.eventsList22 = function(runtimeScene) {
@@ -1232,7 +1232,7 @@ gdjs.shopCode.eventsList22 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.shopCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2), (runtimeScene) => (gdjs.shopCode.asyncCallback21415932(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2), (runtimeScene) => (gdjs.shopCode.asyncCallback21589308(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -1246,10 +1246,10 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2)
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(8).getChild("pinkHero").getAsBoolean();
+{isConditionTrue_0 = runtimeScene.getGame().getVariables().getFromIndex(3).getChild("pinkHero").getAsBoolean();
 }
 if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(6).setString("pink");
+{gdjs.VariablesContainer.badVariable.setString("pink");
 }}
 
 }
@@ -1260,7 +1260,7 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(8).getChild("pinkHero").getAsBoolean();
+{isConditionTrue_0 = !runtimeScene.getGame().getVariables().getFromIndex(3).getChild("pinkHero").getAsBoolean();
 }
 if (isConditionTrue_0) {
 /* Reuse gdjs.shopCode.GDpink_9595bear_9595buy_9595button2Objects2 */
@@ -1292,7 +1292,7 @@ for (var i = 0, k = 0, l = gdjs.shopCode.GDbasic_9595watherObjects2.length;i<l;+
 }
 gdjs.shopCode.GDbasic_9595watherObjects2.length = k;
 if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(5).setString("basic");
+{gdjs.VariablesContainer.badVariable.setString("basic");
 }
 { //Subevents
 gdjs.shopCode.eventsList15(runtimeScene);} //End of subevents
@@ -1408,7 +1408,7 @@ for (var i = 0, k = 0, l = gdjs.shopCode.GDblueBearBuyButton_9595BBBBObjects2.le
 }
 gdjs.shopCode.GDblueBearBuyButton_9595BBBBObjects2.length = k;
 if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(6).setString("blue");
+{gdjs.VariablesContainer.badVariable.setString("blue");
 }}
 
 }
@@ -1422,10 +1422,10 @@ let isConditionTrue_0 = false;
 gdjs.copyArray(runtimeScene.getObjects("currentCharacter"), gdjs.shopCode.GDcurrentCharacterObjects1);
 gdjs.copyArray(runtimeScene.getObjects("currentDropletType"), gdjs.shopCode.GDcurrentDropletTypeObjects1);
 {for(var i = 0, len = gdjs.shopCode.GDcurrentDropletTypeObjects1.length ;i < len;++i) {
-    gdjs.shopCode.GDcurrentDropletTypeObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(5).getAsString());
+    gdjs.shopCode.GDcurrentDropletTypeObjects1[i].getBehavior("Text").setText("");
 }
 }{for(var i = 0, len = gdjs.shopCode.GDcurrentCharacterObjects1.length ;i < len;++i) {
-    gdjs.shopCode.GDcurrentCharacterObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(6).getAsString());
+    gdjs.shopCode.GDcurrentCharacterObjects1[i].getBehavior("Text").setText("");
 }
 }}
 
@@ -1573,7 +1573,7 @@ gdjs.copyArray(runtimeScene.getObjects("coins2"), gdjs.shopCode.GDcoins2Objects1
 {runtimeScene.getScene().getVariables().getFromIndex(1).setBoolean(false);
 }{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "shopTextFlashCooldown");
 }{for(var i = 0, len = gdjs.shopCode.GDcoins2Objects1.length ;i < len;++i) {
-    gdjs.shopCode.GDcoins2Objects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(7).getAsString());
+    gdjs.shopCode.GDcoins2Objects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(2).getAsString());
 }
 }
 { //Subevents
